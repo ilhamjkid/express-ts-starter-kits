@@ -1,0 +1,5 @@
+packages:
+  - "feature-based-architecture"
+  - "layered-architecture"
+allowBuilds:
+  esbuild: true
