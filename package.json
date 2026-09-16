@@ -1,0 +1,8 @@
+{
+  "name": "express-ts-starter-kits",
+  "private": true,
+  "workspaces": [
+    "feature-based-architecture",
+    "layered-architecture"
+  ]
+}

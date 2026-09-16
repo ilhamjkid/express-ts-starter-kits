@@ -1,6 +1,6 @@
 # Express TS Starter Kits
 
-Monorepo containing 2 architectural styles for Express + TypeScript + pnpm.
+A collection of Express.js + TypeScript starter kits demonstrating different architectural styles, configured as a workspace monorepo.
 
 ## 📂 Project Structure
 
@@ -15,7 +15,7 @@ src/
 │   │   ├── auth.controller.ts
 │   │   ├── auth.routes.ts
 │   │   └── auth.service.ts
-│   └── users/          # All user management logic
+│   └── user/           # All user management logic
 │       ├── user.controller.ts
 │       ├── user.model.ts
 │       ├── user.routes.ts
@@ -28,7 +28,7 @@ src/
 
 ```text
 src/
-├── config/             # DB configs, env loaders, 3rd-party clients
+├── config/             # DB configs, env loaders, 3rd party clients
 ├── controllers/        # Request handlers (processes req, res)
 ├── middlewares/        # Auth guards, global error handler, loggers
 ├── models/             # DB schemas / data models
@@ -38,29 +38,42 @@ src/
 └── server.ts           # App entry point (app.listen)
 ```
 
----
+## 🛠️ Tech Stack
 
-## 🛠️ Essential Commands (Run from Root Folder)
+- **Runtime & Package Manager**: Bun
+- **Framework**: Express.js
+- **Language**: TypeScript
 
-### 1. Install All Dependencies
+## 📦 Essential Commands (Run from Root Folder)
 
-```bash
-pnpm install
-```
+1. **Install All Dependencies:**
 
-### 2. Run Development Mode (Hot Reloading)
+   ```bash
+   bun install
+   ```
 
-```bash
-# Feature-Based Version (Port 3000)
-pnpm --filter feature-based-architecture dev
+2. **Run Development Mode (Hot Reloading):**
+   - **Feature-Based Version:**
 
-# Layered Version (Port 3001)
-pnpm --filter layered-architecture dev
+     ```bash
+     bun --filter feature-based-architecture dev
+     ```
 
-```
+   - **Layered Version:**
 
-### 3. Build to Production (Generates dist/ folders)
+     ```bash
+     bun --filter layered-architecture dev
+     ```
 
-```bash
-pnpm -r build
-```
+3. **Build to Production:**
+   - **Feature-Based Version:**
+
+     ```bash
+     bun --filter feature-based-architecture build
+     ```
+
+   - **Layered Version:**
+
+     ```bash
+     bun --filter layered-architecture build
+     ```

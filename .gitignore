@@ -1,6 +1,5 @@
-# Dependencies (Will ignore in all sub-folders)
+# Dependencies
 node_modules/
-.pnpm-store/
 
 # Build Output
 **/dist/
@@ -9,6 +8,11 @@ node_modules/
 # Environment Variables
 **/.env
 **/*.env
+!**/.env.example
 
 # OS Files
 .DS_Store
+Thumbs.db
+
+# Log Files
+*.log
